@@ -1,0 +1,29 @@
+<h3>人员登记系统</h3>
+
+  <div>姓名: <input type="text" [(ngModel)]="firstName"></div>
+  <br>
+  <div>性别: <input type="radio"  value="男"  id="sex1"  name="sex"  [(ngModel)]="sex">男
+             <input type="radio"  value="女"   id="sex2"  name="sex" [(ngModel)]="sex">女</div>
+  <br>
+  <div>居住城市: <select  name="address" [(ngModel)]="address">
+    <option  *ngFor="let obj of addressList">{{obj.addressName}}</option>
+  </select></div>
+  <br>
+  <div>爱好:
+    <input type="checkbox"  id="selectId1" value="吃饭" [(ngModel)]="hobby">吃饭
+    <input type="checkbox"  id="selectId2" value="睡觉" [(ngModel)]="hobby">睡觉
+    <input type="checkbox"  id="selectId3" value="看电视" [(ngModel)]="hobby">看电视</div>
+
+  特殊备注:
+  <textarea [(ngModel)]="textArea" name="textArea" cols="30" rows="10" maxlength="300"></textarea>
+  <div>
+    <button (click)="submitForm()">提交</button></div>
+
+
+
+
+
+
+
+
+

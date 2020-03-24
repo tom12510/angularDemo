@@ -1,0 +1,43 @@
+#one{ /*移动*/
+  width:100px;
+  height:100px;
+  position: relative;
+  animation:myMove2 infinite; /* 简写  绑定keyframes  执行时间 执行次数  */
+  animation-direction: reverse; /* reverse 反向执行   alternate  alternate-reverse */
+  animation-duration: 10s ; /*执行时间*/
+ /* animation-iteration-count:3; !*执行次数*!*/
+/*  animation-name:mymove;  绑定 keyframes */
+  animation-play-state: running; /*开始 running   暂停 paused 绑定事件*/
+  animation-timing-function: ease ; /* 执行速率 ease  ease-in ease-out ease-in-out*/
+  background-color:yellow;
+  transform: rotate(20deg) scale(1,1) translate(20px,20px); /*
+    rotare 旋转角度  scale 控制 长宽
+    变形 rotate（旋转）、scale（缩放）、skew（扭曲）、translate（移动）和matrix（矩阵变形）*/
+
+}
+
+@keyframes mymove
+{
+  from {left:0px;} /*左右*/
+  to {left:200px;}
+}
+
+@keyframes myMove1{
+  from {top:0px;}/*上下*/
+  to {top:200px;}
+}
+
+@keyframes myMove2{
+  0%   {top:0px;background:red;left:0px}
+  25%  {top:200px;background:yellow}
+  50%  {top:100px; background:blue;left:100px} /* 控制变化*/
+  75%  {top:200px;background:green;left:200px}
+  100% {top:0px;}
+}
+
+
+
+
+
+
+

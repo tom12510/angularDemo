@@ -1,0 +1,7 @@
+<div class="search">
+  <input type="text"   [(ngModel)] = 'keyword'/>  <button (click)="doSearch()">搜索</button>
+
+  <ul  *ngIf="isShow" style="list-style:none" >
+    <li *ngFor="let obj of historys;let key=index;" (click)="search(obj)" >{{obj}} </li>
+  </ul>
+</div>
